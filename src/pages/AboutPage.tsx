@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import ImageWithFallback from '../components/ImageWithFallback'
+import { getAssetPath } from '../utils/path'
 
 // 애니메이션 컴포넌트들
 function SlideUpAnimation({ children, delay = 0, duration = 800 }: { children: React.ReactNode; delay?: number; duration?: number }) {
@@ -94,10 +95,10 @@ function CountingAnimation({ target, suffix = "" }: { target: number; suffix?: s
 export default function AboutPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const backgroundImages = [
-    "/images/aboutbackground.jpg",
-    "/images/aboutbackground2.jpg",
-    "/images/aboutbackground3.png",
-    "/images/aboutbackground4.jpg",
+    getAssetPath("/images/aboutbackground.jpg"),
+    getAssetPath("/images/aboutbackground2.jpg"),
+    getAssetPath("/images/aboutbackground3.png"),
+    getAssetPath("/images/aboutbackground4.jpg"),
   ]
 
   useEffect(() => {
@@ -149,7 +150,7 @@ export default function AboutPage() {
                     <div className="relative mb-3 flex justify-center">
                       <div className="w-80 h-96 relative overflow-hidden rounded">
                         <ImageWithFallback
-                          src="/images/about1.jpg"
+                          src={getAssetPath("/images/about1.jpg")}
                           alt="대표 김희성 목사"
                           className="w-full h-full object-cover"
                         />

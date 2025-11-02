@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { ArrowRight } from "lucide-react"
 import Navigation from "../components/Navigation"
 import Footer from "../components/Footer"
+import { getAssetPath } from "../utils/path"
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -14,7 +15,7 @@ export default function HomePage() {
       title: "ABOUT US",
       number: "01",
       mediaType: "video",
-      video: "/videos/aboutus.mp4",
+      video: getAssetPath("/videos/aboutus.mp4"),
       mainTitle: "AURI",
       subtitle: "하나님의 사랑 안에서",
       description: "믿음과 함께하는 특별한 공동체 경험을 만나보세요",
@@ -29,7 +30,7 @@ export default function HomePage() {
       title: "CAMP",
       number: "02",
       mediaType: "video",
-      video: "/videos/camp.mp4",
+      video: getAssetPath("/videos/camp.mp4"),
       mainTitle: "CAMP",
       subtitle: "하나님과 함께하는 캠프",
       description: "하나님과 더 깊이 만나는 특별한 시간들",
@@ -44,7 +45,7 @@ export default function HomePage() {
       title: "Connect Worship",
       number: "03",
       mediaType: "video",
-      video: "/videos/worship.mp4",
+      video: getAssetPath("/videos/worship.mp4"),
       mainTitle: "Connect Worship",
       subtitle: "워십으로 하나님을 섬기는 팀",
       description: "워십과 함께 하나님께 경배를 올려드리는 시간",

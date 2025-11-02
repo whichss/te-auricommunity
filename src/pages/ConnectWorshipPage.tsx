@@ -3,6 +3,7 @@ import { Play } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import ImageWithFallback from '../components/ImageWithFallback'
+import { getAssetPath } from '../utils/path'
 
 function AnimatedElement({ children, delay = 0, className = "" }: {
   children: React.ReactNode
@@ -47,7 +48,7 @@ function AnimatedElement({ children, delay = 0, className = "" }: {
 export default function ConnectWorshipPage() {
   const heroMedia = {
     type: "video",
-    video: "/videos/connectworshipmain.mp4",
+    video: getAssetPath("/videos/connectworshipmain.mp4"),
     alt: "Connect Worship 히어로 영상"
   }
 
@@ -160,7 +161,7 @@ export default function ConnectWorshipPage() {
             <div className="mb-16">
               <div className="aspect-[21/9] relative overflow-hidden">
                 <ImageWithFallback
-                  src="/images/worship-feature-large.jpg"
+                  src={getAssetPath("/images/worship-feature-large.jpg")}
                   alt="Main worship performance"
                   className="w-full h-full object-cover"
                 />
@@ -178,7 +179,7 @@ export default function ConnectWorshipPage() {
               <AnimatedElement key={index} delay={300 + index * 100}>
                 <div className="group relative aspect-[3/4] overflow-hidden cursor-pointer">
                   <ImageWithFallback
-                    src={`/images/worship-grid-${item}.jpg`}
+                    src={getAssetPath(`/images/worship-grid-${item}.jpg`)}
                     alt={`Gallery ${item}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />

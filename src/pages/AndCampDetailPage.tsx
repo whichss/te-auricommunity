@@ -4,6 +4,7 @@ import { Calendar, MapPin, Users, Clock, ArrowLeft } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import ImageWithFallback from '../components/ImageWithFallback'
+import { getAssetPath } from '../utils/path'
 
 export default function AndCampDetailPage() {
   const [activeTab, setActiveTab] = useState('overview')
@@ -157,7 +158,7 @@ export default function AndCampDetailPage() {
                 </div>
                 <div className="lg:w-3/5">
                   <ImageWithFallback
-                    src="/images/andcampimage.jpg"
+                    src={getAssetPath("/images/andcampimage.jpg")}
                     alt="AND 캠프"
                     className="w-full h-[470px] rounded-lg object-cover"
                   />
@@ -174,7 +175,7 @@ export default function AndCampDetailPage() {
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="space-y-4">
                   <ImageWithFallback
-                    src="/images/andcampprogram-1.png"
+                    src={getAssetPath("/images/andcampprogram-1.png")}
                     alt="말씀 프로그램"
                     className="w-full rounded-lg object-cover"
                   />
@@ -186,7 +187,7 @@ export default function AndCampDetailPage() {
 
                 <div className="space-y-4">
                   <ImageWithFallback
-                    src="/images/andcampprogram-2.png"
+                    src={getAssetPath("/images/andcampprogram-2.png")}
                     alt="찬양과 워십"
                     className="w-full rounded-lg object-cover"
                   />
@@ -198,7 +199,7 @@ export default function AndCampDetailPage() {
 
                 <div className="space-y-4">
                   <ImageWithFallback
-                    src="/images/andcampprogram-3.jpg"
+                    src={getAssetPath("/images/andcampprogram-3.jpg")}
                     alt="공동체 활동"
                     className="w-full rounded-lg object-cover"
                   />
@@ -218,7 +219,7 @@ export default function AndCampDetailPage() {
 
               <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800">
                 <ImageWithFallback
-                  src="/images/andcampschedule.jpg"
+                  src={getAssetPath("/images/andcampschedule.jpg")}
                   alt="AND 캠프 상세 일정표"
                   className="w-full h-auto object-contain"
                 />
@@ -233,7 +234,7 @@ export default function AndCampDetailPage() {
 
               <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800">
                 <ImageWithFallback
-                  src="/images/andcamp people.jpg"
+                  src={getAssetPath("/images/andcamp people.jpg")}
                   alt="AND 캠프 강사진 소개"
                   className="w-full h-auto object-contain"
                 />
@@ -292,7 +293,7 @@ export default function AndCampDetailPage() {
               <div className="max-w-2xl mx-auto">
                 <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800">
                   <ImageWithFallback
-                    src="/images/andcampposter.jpg"
+                    src={getAssetPath("/images/andcampposter.jpg")}
                     alt="AND 캠프 공식 포스터"
                     className="w-full h-auto object-contain"
                   />

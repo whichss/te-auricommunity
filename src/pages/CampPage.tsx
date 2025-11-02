@@ -4,6 +4,7 @@ import { X } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import ImageWithFallback from '../components/ImageWithFallback'
+import { getAssetPath } from '../utils/path'
 
 export default function CampPage() {
   const [showApplicationModal, setShowApplicationModal] = useState(false)
@@ -13,7 +14,7 @@ export default function CampPage() {
 
   const heroMedia = {
     type: "video",
-    video: "/videos/campmain.mp4",
+    video: getAssetPath("/videos/campmain.mp4"),
     alt: "캠프 히어로 영상"
   }
 
@@ -30,7 +31,7 @@ export default function CampPage() {
       slug: "auri",
       description: "AURI 공동체의 대표 정기 캠프로, 다음세대를 위한 특별한 영적 성장의 시간입니다.",
       features: ["말씀 집회", "찬양 워십", "공동체 활동", "개인 기도 시간"],
-      image: "/images/auricamp main.jpg"
+      image: getAssetPath("/images/auricamp main.jpg")
     },
     {
       id: 2,
@@ -44,7 +45,7 @@ export default function CampPage() {
       slug: "and",
       description: "2024년, AURI는 10년의 걸음을 돌아보며, 단 한 번의 특별한 캠프, AND를 열었습니다.",
       features: ["말씀 나눔", "공동체 교제", "자연 체험", "문화 활동"],
-      image: "/images/andcamp main.jpg"
+      image: getAssetPath("/images/andcamp main.jpg")
     },
   ]
 

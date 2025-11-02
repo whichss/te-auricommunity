@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import ImageWithFallback from '../components/ImageWithFallback'
+import { getAssetPath } from '../utils/path'
 
 export default function DonationPage() {
   const [copyToast, setCopyToast] = useState(false)
@@ -32,7 +33,7 @@ export default function DonationPage() {
       <section className="min-h-screen flex items-center justify-center relative">
         <div className="absolute inset-0 z-0">
           <ImageWithFallback
-            src="/images/donation.jpg"
+            src={getAssetPath("/images/donation.jpg")}
             alt="후원 - 함께하는 사랑의 손길"
             className="w-full h-full object-cover"
           />

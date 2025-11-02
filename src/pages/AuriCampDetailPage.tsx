@@ -4,6 +4,7 @@ import { Calendar, MapPin, Users, Clock, ArrowLeft, Instagram, Youtube } from 'l
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import ImageWithFallback from '../components/ImageWithFallback'
+import { getAssetPath } from '../utils/path'
 
 export default function AuriCampDetailPage() {
   const [activeTab, setActiveTab] = useState('overview')
@@ -174,7 +175,7 @@ export default function AuriCampDetailPage() {
                 </div>
                 <div className="lg:w-3/5">
                   <ImageWithFallback
-                    src="/images/auricamp people.jpg"
+                    src={getAssetPath("/images/auricamp people.jpg")}
                     alt="AURI 캠프"
                     className="w-full h-[470px] rounded-lg object-cover"
                   />
@@ -191,7 +192,7 @@ export default function AuriCampDetailPage() {
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="space-y-4">
                   <ImageWithFallback
-                    src="/images/auricampprogram-1.jpg"
+                    src={getAssetPath("/images/auricampprogram-1.jpg")}
                     alt="말씀 프로그램"
                     className="w-full rounded-lg object-cover"
                   />
@@ -203,7 +204,7 @@ export default function AuriCampDetailPage() {
 
                 <div className="space-y-4">
                   <ImageWithFallback
-                    src="/images/auricampprogram-2.jpg"
+                    src={getAssetPath("/images/auricampprogram-2.jpg")}
                     alt="찬양과 워십"
                     className="w-full rounded-lg object-cover"
                   />
@@ -215,7 +216,7 @@ export default function AuriCampDetailPage() {
 
                 <div className="space-y-4">
                   <ImageWithFallback
-                    src="/images/auricampprogram-3.jpg"
+                    src={getAssetPath("/images/auricampprogram-3.jpg")}
                     alt="공동체 활동"
                     className="w-full rounded-lg object-cover"
                   />
@@ -235,7 +236,7 @@ export default function AuriCampDetailPage() {
 
               <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800">
                 <ImageWithFallback
-                  src="/images/auri-camp-schedule-full.jpg"
+                  src={getAssetPath("/images/auri-camp-schedule-full.jpg")}
                   alt="AURI 캠프 상세 일정표"
                   className="w-full h-auto object-contain"
                 />
@@ -250,7 +251,7 @@ export default function AuriCampDetailPage() {
 
               <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800">
                 <ImageWithFallback
-                  src="/images/auri-camp-instructors.jpg"
+                  src={getAssetPath("/images/auri-camp-instructors.jpg")}
                   alt="AURI 캠프 강사진 소개"
                   className="w-full h-auto object-contain"
                 />
@@ -303,7 +304,7 @@ export default function AuriCampDetailPage() {
                     {['1', '2', '3', '4'].map((num) => (
                       <div key={num} className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800">
                         <ImageWithFallback
-                          src={`/images/auri-facility-${num}.jpg`}
+                          src={getAssetPath(`/images/auri-facility-${num}.jpg`)}
                           alt={`시설 ${num}`}
                           className="w-full h-24 object-cover"
                         />
@@ -326,7 +327,7 @@ export default function AuriCampDetailPage() {
               <div className="max-w-2xl mx-auto">
                 <div className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800">
                   <ImageWithFallback
-                    src="/images/auri-camp-poster.jpg"
+                    src={getAssetPath("/images/auri-camp-poster.jpg")}
                     alt="AURI 캠프 공식 포스터"
                     className="w-full h-auto object-contain"
                   />

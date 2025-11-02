@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { getAssetPath } from '../utils/path'
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -14,7 +15,7 @@ export default function Navigation() {
           <Link to="/" className="flex items-center space-x-3">
             <div className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden">
               <img
-                src="/images/logo.png"
+                src={getAssetPath("/images/logo.png")}
                 alt="AURI COMMUNITY 로고"
                 className="w-full h-full object-cover"
               />

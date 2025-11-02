@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Instagram, Youtube, Facebook } from 'lucide-react'
+import { getAssetPath } from '../utils/path'
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3 mb-6">
               <div className="w-8 h-8 rounded-full flex items-center justify-center overflow-hidden">
                 <img
-                  src="/images/logo.png"
+                  src={getAssetPath("/images/logo.png")}
                   alt="AURI COMMUNITY 로고"
                   className="w-full h-full object-cover"
                 />
